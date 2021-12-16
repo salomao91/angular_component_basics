@@ -7,12 +7,12 @@ import { ServerComponent } from './server/server.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent
+    ServerComponent,
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent, ServerComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
