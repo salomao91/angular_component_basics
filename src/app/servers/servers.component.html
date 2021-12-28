@@ -1,7 +1,12 @@
 <!-- this {{ }} indicates to Angular we use string interpolation -->
 <!-- this [] indicates to Angular we use property binding -->
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
-<p [innerText] = "allowNewServer"></p>
+<!-- this () indicates to Angular we use event binding -->
+    <!-- sintaxe: (nativeEventOfHtmlOrJavascriptName) = "the code we want to execute when this event ocurrs" -->
+
+<button class="btn btn-primary" [disabled]="!allowNewServer"
+(click)="onCreateServer()">Add Server</button>
+<!-- <p [innerText] = "allowNewServer"></p> -->
+<p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
 <!-- does not mix string interpolation and property binding in the same template (html), it breaks Angular sintaxe. -->
