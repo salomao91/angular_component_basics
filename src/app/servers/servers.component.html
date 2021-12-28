@@ -1,4 +1,11 @@
+<!-- this {{ }} indicates to Angular we use string interpolation -->
 <!-- this [] indicates to Angular we use property binding -->
-<button class="btn btn-primary" [disabled]="allowNewServer">Add Server</button>
+<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<p [innerText] = "allowNewServer"></p>
 <app-server></app-server>
 <app-server></app-server>
+<!-- does not mix string interpolation and property binding in the same template (html), it breaks Angular sintaxe. -->
+<!-- 
+    . string interpolation - to output something like a text in the template (html file).
+    . property binding - to change some html or dom property or a directive, a component property in the template.
+-->
