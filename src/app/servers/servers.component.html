@@ -9,8 +9,8 @@
 <p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
-<!-- does not mix string interpolation and property binding in the same template (html), it breaks Angular sintaxe. -->
+<!-- does not mix string interpolation and property binding on the same line/sintaxe, cause it may breaks Angular sintaxe-->
 <!-- 
-    . string interpolation - to output something like a text in the template (html file).
-    . property binding - to change some html or dom property or a directive, a component property in the template.
+    . string interpolation - to output something like a text in the template (html file) (it returns a string to template).
+    . property binding - to change some html or dom property or a directive, a component property in the template (it returns a javascript expression to template).
 -->
