@@ -2,6 +2,10 @@
 <!-- this [] indicates to Angular we use property binding -->
 <!-- this () indicates to Angular we use event binding -->
     <!-- sintaxe: (nativeEventOfHtmlOrJavascriptName) = "the code we want to execute when this event ocurrs" -->
+<label for="Server Name"></label>
+<input type="text" class="form-control"
+(input)="onUpdateServerName($event)">
+<p>{{ serverName }}</p>
 
 <button class="btn btn-primary" [disabled]="!allowNewServer"
 (click)="onCreateServer()">Add Server</button>
