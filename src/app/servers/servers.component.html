@@ -12,12 +12,11 @@
 <label for="Server Name"></label>
 <input type="text" class="form-control"
 [(ngModel)]="serverName">
-<p>{{ serverName }}</p>
 
 <button class="btn btn-primary" [disabled]="!allowNewServer"
 (click)="onCreateServer()">Add Server</button>
-<!-- <p [innerText] = "allowNewServer"></p> -->
 <p>{{ serverCreationStatus }}</p>
+
 <app-server></app-server>
 <app-server></app-server>
 <!-- does not mix string interpolation and property binding on the same line/sintaxe, cause it may breaks Angular sintaxe-->
