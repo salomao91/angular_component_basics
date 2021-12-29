@@ -2,9 +2,16 @@
 <!-- this [] indicates to Angular we use property binding -->
 <!-- this () indicates to Angular we use event binding -->
     <!-- sintaxe: (nativeEventOfHtmlOrJavascriptName) = "the code we want to execute when this event ocurrs" -->
+
+<!-- one way binding, send data to typescript -->
+<!-- <label for="Server Name"></label>
+<input type="text" class="form-control"
+(input)="onUpdateServerName($event)"> -->
+
+<!--two way binding with ngModel, gets data form typescript and send data to typescript code -->
 <label for="Server Name"></label>
 <input type="text" class="form-control"
-(input)="onUpdateServerName($event)">
+[(ngModel)]="serverName">
 <p>{{ serverName }}</p>
 
 <button class="btn btn-primary" [disabled]="!allowNewServer"
