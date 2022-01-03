@@ -22,8 +22,8 @@
     <p>No server was created</p>
 </ng-template>
 
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
+
 <!-- does not mix string interpolation and property binding on the same line/sintaxe, cause it may breaks Angular sintaxe-->
 <!-- 
     . string interpolation - to output something like a text in the template (html file) (it returns a string to template).
