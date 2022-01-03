@@ -2,5 +2,11 @@
 <!-- <p> {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p> -->
 
 <!-- directive - this square brackets indicate that we are binding to a property of the directive ngStyle
-     sintaxe - key is the ngStyle property = value is the javascript object -->
-<p [ngStyle]="{ backgroundColor: getColor() }"> {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p>
+     sintaxe - key is the ngStyle property = value is the javascript object 
+     ngStyle - change css style attribute
+     ngClass - add or remove a class from the css style attribute -->
+<p 
+    [ngStyle]="{ backgroundColor: getColor() }" 
+    [ngClass]="{online: getServerStatus() === 'online'}">
+    {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
+</p>
